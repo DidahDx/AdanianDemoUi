@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:padding="8dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/user_image"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/jassir_jonis_unsplash" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/uniform_medium"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/iv_user"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Antonio Tyler" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintLeft_toRightOf="@id/iv_user"
+        app:layout_constraintTop_toBottomOf="@id/tv_username"
+        tools:text="Added 2 file" />
+
+    <LinearLayout
+        android:id="@+id/ll_images"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@id/iv_user"
+        app:layout_constraintTop_toBottomOf="@id/tv_description">
+
+        <ImageView
+            android:id="@+id/iv_image_1"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_margin="9dp"
+            android:contentDescription="@string/comment_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/project_image_1" />
+
+        <ImageView
+            android:id="@+id/iv_image_2"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_margin="9dp"
+            android:contentDescription="@string/comment_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/project_image_2" />
+
+        <ImageView
+            android:id="@+id/iv_image_3"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_margin="9dp"
+            android:contentDescription="@string/comment_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/project_image_3" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:padding="3dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Yesterday" />
+
+    <ImageView
+        android:id="@+id/iv_pdf"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="17dp"
+        android:contentDescription="@string/document_file"
+        android:src="@drawable/pdf"
+        app:layout_constraintLeft_toRightOf="@id/iv_user"
+        app:layout_constraintTop_toBottomOf="@id/ll_images" />
+
+    <TextView
+        android:id="@+id/tv_pdf_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/iv_pdf"
+        app:layout_constraintTop_toTopOf="@id/iv_pdf"
+        tools:text="Presentation.pdf" />
+
+    <TextView
+        android:id="@+id/tv_pdf_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/iv_pdf"
+        app:layout_constraintTop_toBottomOf="@id/tv_pdf_name"
+        tools:text="5Mb" />
+
+    <ImageView
+        android:id="@+id/iv_ai"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="17dp"
+        android:contentDescription="@string/document_file"
+        android:src="@drawable/adobe_illustrator"
+        app:layout_constraintLeft_toRightOf="@id/tv_pdf_name"
+        app:layout_constraintTop_toBottomOf="@id/ll_images" />
+
+    <TextView
+        android:id="@+id/tv_ai_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/iv_ai"
+        app:layout_constraintTop_toTopOf="@id/iv_ai"
+        tools:text="Logo.ai" />
+
+    <TextView
+        android:id="@+id/tv_ai_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/iv_ai"
+        app:layout_constraintTop_toBottomOf="@id/tv_ai_name"
+        tools:text="10Mb" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_file"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_pdf,tv_pdf_size,tv_pdf_name,iv_ai,tv_ai_name,tv_ai_size" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

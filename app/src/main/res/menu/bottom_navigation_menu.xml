@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/projectsFragment"
+        android:icon="@drawable/ic_project_folder"
+        android:title="@string/project" />
+
+    <item
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chat"
+        />
+
+    <item
+        android:id="@+id/calendarFragment"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/calendar"
+        />
+
+    <item
+        android:id="@+id/statisticsFragment"
+        android:icon="@drawable/ic_pie_chart"
+        android:title="@string/statistics"
+        />
+
+
+</menu>

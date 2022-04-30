@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">AdanianDemoUi</string>
+
+    <string name="projects">Projects</string>
+
+    <string name="all">All</string>
+    <string name="pending">Pending</string>
+    <string name="complete">Complete</string>
+    <string name="short_by">Sort by:</string>
+    <string name="project_progress">Project progress</string>
+    <string name="search">Search</string>
+    <string name="project">Project</string>
+    <string name="chat">Chat</string>
+    <string name="statistics">Statistics</string>
+    <string name="calendar">Calendar</string>
+    <string name="add_project">Add project</string>
+    <string name="notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="project_icon">Project Icon</string>
+    <string name="user_image">User Image</string>
+    <string name="project_filters">Project filter</string>
+    <string name="sort">Sort</string>
+    <string name="sort_project">Sort project</string>
+    <string name="project_progress_percentage">Project progress percentage</string>
+    <string name="navigate_back">Navigate back</string>
+    <string name="more_options">More options</string>
+    <string name="subtask_icon">Subtask Icon</string>
+    <string name="subtask">Subtask</string>
+    <string name="add_subtask">Add subtask</string>
+    <string name="add_a_file">Add a file</string>
+    <string name="send_message">Send Message</string>
+    <string name="write_a_comment">Write a comment...</string>
+    <string name="comment_image">Comment image</string>
+    <string name="document_file">Document file</string>
+
+
+</resources>
