@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AdanianDemoUi" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#258FFB</item>
+        <item name="colorSecondaryVariant">#064E98</item>
+
+        <!--   icons color -->
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/uniform_medium</item>
+        <item name="chipStyle">@style/Widget.App.Chip</item>
+    </style>
+
+    <style name="toolbar" >
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Widget.App.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipIconTint">@color/cultured</item>
+        <item name="chipBackgroundColor">@drawable/selection_chip_color</item>
+        <item name="background">@drawable/selection_chip</item>
+        <item name="fontFamily">@font/uniform_medium</item>
+        <item name="android:fontFamily">@font/uniform_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@drawable/selection_chip_text_color</item>
+        <item name="rippleColor">@color/blue</item>
+        <item name="singleSelection">true</item>
+        <item name="selectionRequired">true</item>
+        <item name="checkedIconVisible">false</item>
+    </style>
+
+</resources>

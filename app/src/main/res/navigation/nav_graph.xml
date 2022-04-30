@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/projectsFragment">
+
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="com.github.didahdx.adaniandemoui.ui.projects.ProjectsFragment"
+        android:label="@string/project"
+        tools:layout="@layout/projects_fragment" >
+        <action
+            android:id="@+id/action_projectsFragment_to_projectDetailsFragment"
+            app:destination="@id/projectDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectDetailsFragment"
+        android:name="com.github.didahdx.adaniandemoui.ui.projects_details.ProjectDetailsFragment"
+        android:label=""
+        tools:layout="@layout/project_details_fragment" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.github.didahdx.adaniandemoui.ui.calendar.CalendarFragment"
+        android:label="@string/calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.github.didahdx.adaniandemoui.ui.chat.ChatFragment"
+        android:label="@string/chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.github.didahdx.adaniandemoui.ui.statistics.StatisticsFragment"
+        android:label="@string/statistics"
+        tools:layout="@layout/fragment_statistics" />
+</navigation>

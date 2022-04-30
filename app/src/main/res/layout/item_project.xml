@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:contentPadding="5dp"
+    android:layout_margin="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/project_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/spotify_music_logo" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/uniform_medium"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/iv_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Music App" />
+
+    <ImageView
+        android:id="@+id/iv_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:contentDescription="@string/more_options"
+        android:src="@drawable/ic_more_vert"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toRightOf="@id/iv_icon"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="October 25,Mon 2019"
+        tools:textColor="@color/blue" />
+
+    <com.mancj.slimchart.SlimChart
+        android:id="@+id/iv_progress"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/project_progress_percentage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_options"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedEdges="true"
+        app:strokeWidth="3dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user_1"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
+        android:contentDescription="@string/user_image"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/iv_icon"
+        app:layout_constraintTop_toBottomOf="@id/tv_date"
+        tools:src="@drawable/alyona_grishina_unsplash" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user_2"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
+        android:contentDescription="@string/user_image"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/iv_user_1"
+        app:layout_constraintTop_toBottomOf="@id/tv_date"
+        tools:src="@drawable/emma_lyons_unsplash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

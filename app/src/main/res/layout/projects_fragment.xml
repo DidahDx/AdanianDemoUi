@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.projects.ProjectsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cultured"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/banner_background"
+            android:orientation="vertical"
+            android:paddingBottom="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/app_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_projects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                android:layout_marginVertical="16dp"
+                android:fontFamily="@font/uniform_bold"
+                android:text="@string/projects"
+                android:textAppearance="@color/black"
+                android:textSize="39sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/include" />
+
+            <HorizontalScrollView
+                android:id="@+id/hv_chips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="18dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_projects">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group"
+                    style="@style/Widget.App.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:contentDescription="@string/project_filters"
+                    android:minWidth="48dp"
+                    android:padding="4dp"
+                    app:selectionRequired="true"
+                    app:singleLine="true"
+                    app:singleSelection="true"/>
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/tv_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="14dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="27dp"
+                android:gravity="start"
+                android:text="@string/short_by"
+                android:textColor="@color/davys_grey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hv_chips" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                tools:listitem="@layout/item_spinner"
+                android:contentDescription="@string/sort_project"
+                app:layout_constraintLeft_toRightOf="@id/tv_sort"
+                app:layout_constraintTop_toBottomOf="@id/hv_chips" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="27dp"
+                android:contentDescription="@string/sort"
+                android:src="@drawable/sort_abacus"
+                app:civ_border_color="@color/cultured"
+                app:civ_border_width="2dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hv_chips" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_projects"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            android:layout_marginTop="3dp"
+            android:paddingHorizontal="6dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_banner"
+            tools:listitem="@layout/item_project"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="9dp"
+        android:contentDescription="@string/add_project"
+        android:src="@drawable/ic_add" />
+
+
+</FrameLayout>
