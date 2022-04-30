@@ -9,6 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:layout_marginBottom="60dp"
         android:background="@color/cultured">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,18 +38,26 @@
 
                     <ImageView
                         android:id="@+id/iv_back_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
                         android:layout_alignParentStart="true"
+                        android:background="@drawable/icon_button_ripple"
+                        android:clickable="true"
                         android:contentDescription="@string/navigate_back"
+                        android:focusable="true"
+                        android:padding="12dp"
                         android:src="@drawable/ic_back_arrow" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
                         android:layout_alignParentEnd="true"
                         android:layout_marginEnd="7dp"
+                        android:background="@drawable/icon_button_ripple"
+                        android:clickable="true"
                         android:contentDescription="@string/more_options"
+                        android:focusable="true"
+                        android:padding="12dp"
                         android:src="@drawable/ic_more_vert" />
                 </RelativeLayout>
             </com.google.android.material.appbar.MaterialToolbar>
@@ -58,9 +68,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="5dp"
-                android:text="October 25, Mon 2019"
-                android:textColor="@color/spotify_green"
-                android:textSize="18sp"
+                tools:text="October 25, Mon 2019"
+                tools:textColor="@color/spotify_green"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
@@ -71,9 +81,9 @@
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/uniform_bold"
-                android:text="Music App"
+                tools:text="Music App"
                 android:textColor="@color/black"
-                android:textSize="38sp"
+                android:textSize="28sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_date" />
 
@@ -81,11 +91,12 @@
                 android:id="@+id/iv_progress"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginEnd="6dp"
+                app:layout_constraintHorizontal_bias=".92"
                 android:contentDescription="@string/project_progress_percentage"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv_title"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintTop_toBottomOf="@+id/tv_date"
                 app:roundedEdges="true"
                 app:strokeWidth="2dp" />
 
@@ -139,21 +150,23 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/ll_subtask"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="160dp"
             android:orientation="horizontal"
-            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/sub_task_background"
+            android:layout_marginHorizontal="10dp"
             android:layout_marginTop="6dp"
-            android:padding="12dp"
+            android:padding="3dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cl_banner">
 
             <ImageView
                 android:id="@+id/iv_subtask"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="6dp"
-                android:src="@drawable/ic_notifications"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="12dp"
+                android:layout_marginHorizontal="6dp"
+                android:src="@drawable/task"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:contentDescription="@string/subtask_icon" />
@@ -162,36 +175,122 @@
                 android:id="@+id/tv_subtask"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="6dp"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="@id/iv_subtask"
+                app:layout_constraintBottom_toBottomOf="@id/iv_subtask"
                 app:layout_constraintLeft_toRightOf="@id/iv_subtask"
                 android:text="@string/subtask"
                 android:fontFamily="@font/uniform_medium"
-                android:textSize="19sp"
+                android:textSize="17sp"
                 />
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="6dp"
+                android:clickable="true"
+                android:background="@drawable/icon_button_ripple"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:contentDescription="@string/add_subtask"
-                android:src="@drawable/ic_notifications"
-                android:layout_margin="6dp"
-                />
+                android:src="@drawable/ic_add_circle"
+                android:layout_marginHorizontal="6dp"
+                android:focusable="true" />
 
             <View
                 android:id="@+id/vw_line"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="3dp"
                 android:background="@color/lightGrey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_subtask" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_subtask"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vw_line"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:listitem="@layout/item_subtask"
+                tools:itemCount="2" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comments"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:paddingHorizontal="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_subtask"
+            tools:listitem="@layout/item_comments"
+            tools:itemCount="3"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="1"
+        android:padding="7dp"
+        android:background="@color/white"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/iv_add_file"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/round_background"
+            android:clickable="true"
+            android:contentDescription="@string/add_a_file"
+            android:focusable="true"
+            android:padding="12dp"
+            android:src="@drawable/paper_clip" />
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toStartOf="@id/iv_send_message"
+            android:layout_toEndOf="@id/iv_add_file"
+            android:background="@android:color/transparent"
+            android:hint="@string/write_a_comment"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingHorizontal="5dp"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_send_message"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:padding="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:background="@drawable/icon_button_ripple"
+            android:src="@drawable/send_message"
+            android:contentDescription="@string/send_message"
+            android:focusable="true" />
+    </RelativeLayout>
 </FrameLayout>

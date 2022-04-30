@@ -31,7 +31,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginHorizontal="4dp"
-                    android:layout_weight=".8"
+                    android:layout_weight=".9"
                     android:background="@drawable/search_layout"
                     android:backgroundTint="@color/cultured"
                     android:drawableStart="@drawable/ic_search"
@@ -44,14 +44,18 @@
                     android:paddingHorizontal="12dp"
                     android:singleLine="true"
                     android:textColor="@color/light_silver"
-                    android:textColorHint="@color/light_silver" />
+                    android:textColorHint="@color/light_silver"
+                    android:importantForAutofill="no" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:clickable="true"
+                    android:background="@drawable/icon_button_ripple"
+                    android:layout_weight=".1"
                     android:contentDescription="@string/notifications"
-                    android:src="@drawable/ic_notifications" />
+                    android:src="@drawable/ic_notifications"
+                    android:focusable="true" />
             </LinearLayout>
 
 

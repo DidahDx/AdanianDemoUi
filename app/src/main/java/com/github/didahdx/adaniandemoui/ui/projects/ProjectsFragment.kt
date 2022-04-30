@@ -6,13 +6,16 @@ import android.os.Bundle
 import android.view.*
 import android.widget.ArrayAdapter
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.didahdx.adaniandemoui.R
 import com.github.didahdx.adaniandemoui.databinding.ProjectsFragmentBinding
+import com.github.didahdx.adaniandemoui.extension.navigateSafe
 import com.github.didahdx.adaniandemoui.model.Project
+import com.github.didahdx.adaniandemoui.ui.projects_details.ProjectDetailsFragment
 import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.badge.BadgeUtils
 import com.google.android.material.chip.Chip
@@ -20,16 +23,13 @@ import com.google.android.material.chip.Chip
 
 class ProjectsFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ProjectsFragment()
-    }
 
     private lateinit var viewModel: ProjectsViewModel
 
     private var _binding: ProjectsFragmentBinding? = null
 
     // This property is only valid between onCreateView and
-// onDestroyView.
+    // onDestroyView.
     private val binding get() = _binding!!
 
 
@@ -47,9 +47,8 @@ class ProjectsFragment : Fragment() {
         val manager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         val adapter = ProjectAdapter(object : OnItemClickListener {
             override fun onItemClick(project: Project) {
-                val action =
-                    ProjectsFragmentDirections.actionProjectsFragmentToProjectDetailsFragment()
-                findNavController().navigate(action)
+                val bundle = bundleOf(ProjectDetailsFragment.PROJECT_ID to project.id)
+                findNavController().navigateSafe(R.id.action_projectsFragment_to_projectDetailsFragment,bundle)
             }
         })
 
@@ -89,7 +88,7 @@ class ProjectsFragment : Fragment() {
         for (item in viewModel.chipItems) {
             val chip = Chip(binding.chipGroup.context)
             chip.text = item.statusName
-           if (item.isSelected)  chip.isChecked = true
+            if (item.isSelected) chip.isChecked = true
             chip.id = item.count
             chip.height = 110
             chip.width = 180

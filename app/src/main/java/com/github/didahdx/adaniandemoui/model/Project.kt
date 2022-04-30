@@ -1,7 +1,5 @@
 package com.github.didahdx.adaniandemoui.model
 
-import android.graphics.drawable.Drawable
-
 /**
  * @author Daniel Didah on 4/28/22
  */

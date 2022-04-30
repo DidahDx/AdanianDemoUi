@@ -6,11 +6,18 @@
         <entry key="../../Library/Android/sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.4078666096622488" />
         <entry key="app/src/main/res/drawable/banner_background.xml" value="0.1435" />
         <entry key="app/src/main/res/drawable/chip_fonts.xml" value="0.1435" />
+        <entry key="app/src/main/res/drawable/comment_divider.xml" value="0.1435" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/ic_add_circle.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/ic_back_arrow.xml" value="0.206" />
         <entry key="app/src/main/res/drawable/ic_chat.xml" value="0.183" />
         <entry key="app/src/main/res/drawable/ic_notifications.xml" value="0.183" />
         <entry key="app/src/main/res/drawable/ic_pie_chart.xml" value="0.183" />
         <entry key="app/src/main/res/drawable/ic_project_folder.xml" value="0.183" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.166" />
+        <entry key="app/src/main/res/drawable/icon_button_ripple.xml" value="0.1435" />
+        <entry key="app/src/main/res/drawable/image_round_background.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/round_background.xml" value="0.206" />
         <entry key="app/src/main/res/drawable/search_layout.xml" value="0.183" />
         <entry key="app/src/main/res/drawable/selected_category.xml" value="0.166" />
         <entry key="app/src/main/res/drawable/selection_chip.xml" value="0.166" />
@@ -18,16 +25,21 @@
         <entry key="app/src/main/res/drawable/selection_chip_text_color.xml" value="0.166" />
         <entry key="app/src/main/res/drawable/selection_text_style.xml" value="0.166" />
         <entry key="app/src/main/res/drawable/sort_icon_backgorund.xml" value="0.1435" />
+        <entry key="app/src/main/res/drawable/sub_task_background.xml" value="0.1435" />
         <entry key="app/src/main/res/drawable/unselected_category.xml" value="0.166" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28703703703703703" />
         <entry key="app/src/main/res/layout/app_tool_bar.xml" value="0.265625" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.265625" />
         <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/fragment_statistics.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/layout/item_comment_with_files.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_comments.xml" value="4.0" />
+        <entry key="app/src/main/res/layout/item_comments_with_image.xml" value="0.4078666096622488" />
         <entry key="app/src/main/res/layout/item_project.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_search_layout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_spinner.xml" value="0.4078666096622488" />
-        <entry key="app/src/main/res/layout/project_details_fragment.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/layout/item_subtask.xml" value="0.4078666096622488" />
+        <entry key="app/src/main/res/layout/project_details_fragment.xml" value="0.5953389830508474" />
         <entry key="app/src/main/res/layout/projects_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.496875" />
         <entry key="app/src/main/res/menu/project_menu.xml" value="0.33" />

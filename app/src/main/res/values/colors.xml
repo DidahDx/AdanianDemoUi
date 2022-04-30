@@ -18,4 +18,5 @@
     <color name="lightGrey">#E0E2E6</color>
 
     <color name="notification_color">#FF000000</color>
+    <color name="rippleOnAccent">#3D5F5B5B</color>
 </resources>

@@ -1,7 +1,6 @@
 package com.github.didahdx.adaniandemoui.ui.projects
 
 import android.R
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -17,16 +16,17 @@ import com.github.didahdx.adaniandemoui.util.ColorUtil
 /**
  * @author Daniel Didah on 4/28/22
  */
-class ProjectAdapter(private val clickListener: OnItemClickListener) : ListAdapter<Project, ProjectAdapter.ProjectViewHolder>(ProjectDiffUtil()) {
+class ProjectAdapter(private val clickListener: OnItemClickListener) :
+    ListAdapter<Project, ProjectAdapter.ProjectViewHolder>(ProjectDiffUtil()) {
 
     inner class ProjectViewHolder(val binding: ItemProjectBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        init{
+        init {
             binding.apply {
                 root.setOnClickListener {
                     val position = adapterPosition
-                    if (position != RecyclerView.NO_POSITION){
+                    if (position != RecyclerView.NO_POSITION) {
                         clickListener.onItemClick(getItem(position))
                     }
                 }
@@ -36,7 +36,7 @@ class ProjectAdapter(private val clickListener: OnItemClickListener) : ListAdapt
         fun bind(project: Project) {
             binding.tvTitle.text = project.name
             binding.tvDate.text = project.date
-            binding.tvDate.setTextColor(ContextCompat.getColor(binding.root.context,project.color))
+            binding.tvDate.setTextColor(ContextCompat.getColor(binding.root.context, project.color))
             Glide.with(binding.root.context)
                 .load(project.icon)
                 .centerCrop()
@@ -53,8 +53,13 @@ class ProjectAdapter(private val clickListener: OnItemClickListener) : ListAdapt
                 .into(binding.ivUser2)
 
             val colors = IntArray(2)
-            colors[1] = ContextCompat.getColor(binding.root.context,project.color)
-            colors[0] = ColorUtil.manipulateColor(ContextCompat.getColor(binding.root.context,project.color),2.5f)
+            colors[1] = ContextCompat.getColor(binding.root.context, project.color)
+            colors[0] = ColorUtil.manipulateColor(
+                ContextCompat.getColor(
+                    binding.root.context,
+                    project.color
+                ), 2.5f
+            )
             binding.ivProgress.colors = colors
 
 

@@ -40,14 +40,17 @@
 
     <ImageView
         android:id="@+id/iv_options"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:clickable="true"
+        android:padding="5dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="2dp"
+        android:background="@drawable/icon_button_ripple"
         android:contentDescription="@string/more_options"
         android:src="@drawable/ic_more_vert"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
 
     <TextView
         android:id="@+id/tv_date"

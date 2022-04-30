@@ -1,8 +1,7 @@
 package com.github.didahdx.adaniandemoui.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -10,7 +9,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.github.didahdx.adaniandemoui.R
 import com.github.didahdx.adaniandemoui.databinding.ActivityMainBinding
-import com.google.android.material.appbar.MaterialToolbar
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
@@ -22,19 +20,20 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 //        setSupportActionBar(binding.include.toolbarSearch)
-        val navHostFragment =  supportFragmentManager.
-        findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-        appBarConfiguration = AppBarConfiguration.Builder(R.id.projectsFragment,
-            R.id.calendarFragment,R.id.chatFragment,R.id.statisticsFragment
+        appBarConfiguration = AppBarConfiguration.Builder(
+            R.id.projectsFragment,
+            R.id.calendarFragment, R.id.chatFragment, R.id.statisticsFragment
         ).build()
 //        NavigationUI.setupActionBarWithNavController(this,navController,appBarConfiguration)
-        NavigationUI.setupWithNavController(binding.bottomNavigation,navController)
+        NavigationUI.setupWithNavController(binding.bottomNavigation, navController)
     }
 
-    fun setActionBars(view: Toolbar){
+    fun setActionBars(view: Toolbar) {
         setSupportActionBar(view)
-        NavigationUI.setupActionBarWithNavController(this,navController,appBarConfiguration)
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
     }
 }

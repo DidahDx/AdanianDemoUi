@@ -18,7 +18,13 @@
         android:id="@+id/projectDetailsFragment"
         android:name="com.github.didahdx.adaniandemoui.ui.projects_details.ProjectDetailsFragment"
         android:label=""
-        tools:layout="@layout/project_details_fragment" />
+        tools:layout="@layout/project_details_fragment" >
+        <argument
+            android:name="projectId"
+            app:argType="integer"
+            android:defaultValue="0"
+            />
+    </fragment>
     <fragment
         android:id="@+id/calendarFragment"
         android:name="com.github.didahdx.adaniandemoui.ui.calendar.CalendarFragment"
