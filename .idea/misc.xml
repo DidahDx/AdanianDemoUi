@@ -33,12 +33,12 @@
         <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/fragment_statistics.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/item_comment_with_files.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/item_comments.xml" value="4.0" />
+        <entry key="app/src/main/res/layout/item_comments.xml" value="0.5321969696969697" />
         <entry key="app/src/main/res/layout/item_comments_with_image.xml" value="0.4078666096622488" />
         <entry key="app/src/main/res/layout/item_project.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_search_layout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_spinner.xml" value="0.4078666096622488" />
-        <entry key="app/src/main/res/layout/item_subtask.xml" value="0.4078666096622488" />
+        <entry key="app/src/main/res/layout/item_subtask.xml" value="0.75" />
         <entry key="app/src/main/res/layout/project_details_fragment.xml" value="0.5953389830508474" />
         <entry key="app/src/main/res/layout/projects_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.496875" />

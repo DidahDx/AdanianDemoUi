@@ -5,14 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.projects_details.ProjectDetailsFragment">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="13dp">
+
+            <ImageView
+                android:id="@+id/iv_back_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/icon_button_ripple"
+                android:clickable="true"
+                android:contentDescription="@string/navigate_back"
+                android:focusable="true"
+                android:padding="12dp"
+                android:src="@drawable/ic_back_arrow" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/icon_button_ripple"
+                android:clickable="true"
+                android:contentDescription="@string/more_options"
+                android:focusable="true"
+                android:padding="12dp"
+                android:src="@drawable/ic_more_vert" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="top"
         android:layout_marginBottom="60dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:background="@color/cultured">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_banner"
             android:layout_width="match_parent"
@@ -23,44 +62,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="13dp">
-
-                    <ImageView
-                        android:id="@+id/iv_back_button"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_alignParentStart="true"
-                        android:background="@drawable/icon_button_ripple"
-                        android:clickable="true"
-                        android:contentDescription="@string/navigate_back"
-                        android:focusable="true"
-                        android:padding="12dp"
-                        android:src="@drawable/ic_back_arrow" />
-
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="7dp"
-                        android:background="@drawable/icon_button_ripple"
-                        android:clickable="true"
-                        android:contentDescription="@string/more_options"
-                        android:focusable="true"
-                        android:padding="12dp"
-                        android:src="@drawable/ic_more_vert" />
-                </RelativeLayout>
-            </com.google.android.material.appbar.MaterialToolbar>
 
             <TextView
                 android:id="@+id/tv_date"
@@ -68,33 +70,39 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="5dp"
-                tools:text="October 25, Mon 2019"
-                tools:textColor="@color/spotify_green"
-
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/toolbar" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="October 25, Mon 2019"
+                tools:textColor="@color/spotify_green" />
 
             <TextView
                 android:id="@+id/tv_title"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
                 android:fontFamily="@font/uniform_bold"
-                tools:text="Music App"
+                android:maxLines="1"
                 android:textColor="@color/black"
                 android:textSize="28sp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_progress"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_date" />
+                app:layout_constraintTop_toBottomOf="@id/tv_date"
+                tools:text="Music App" />
 
             <com.mancj.slimchart.SlimChart
                 android:id="@+id/iv_progress"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
-                android:layout_marginEnd="6dp"
-                app:layout_constraintHorizontal_bias=".92"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="3dp"
                 android:contentDescription="@string/project_progress_percentage"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="2"
                 app:layout_constraintStart_toEndOf="@+id/tv_title"
                 app:layout_constraintTop_toBottomOf="@+id/tv_date"
                 app:roundedEdges="true"
@@ -220,6 +228,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_comments"
             android:layout_width="0dp"
@@ -235,7 +244,6 @@
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
