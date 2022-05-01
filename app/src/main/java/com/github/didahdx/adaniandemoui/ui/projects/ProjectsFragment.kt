@@ -42,13 +42,16 @@ class ProjectsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = ProjectsFragmentBinding.inflate(inflater, container, false)
         val manager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         val adapter = ProjectAdapter(object : OnItemClickListener {
             override fun onItemClick(project: Project) {
                 val bundle = bundleOf(ProjectDetailsFragment.PROJECT_ID to project.id)
-                findNavController().navigateSafe(R.id.action_projectsFragment_to_projectDetailsFragment,bundle)
+                findNavController().navigateSafe(
+                    R.id.action_projectsFragment_to_projectDetailsFragment,
+                    bundle
+                )
             }
         })
 

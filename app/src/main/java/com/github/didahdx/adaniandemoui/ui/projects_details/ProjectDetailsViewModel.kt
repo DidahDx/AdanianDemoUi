@@ -9,8 +9,8 @@ class ProjectDetailsViewModel : ViewModel() {
     val commentList = DummyData.commentsList
     val subTasks = DummyData.subTaskList
 
-    fun getProjectById(projectId:Int): Project?{
-       return DummyData.projects.find { project -> project.id == projectId  }
+    fun getProjectById(projectId: Int): Project? {
+        return DummyData.projects.find { project -> project.id == projectId }
     }
 
 }
