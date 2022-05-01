@@ -19,8 +19,8 @@ import com.github.didahdx.adaniandemoui.util.ColorUtil
 
 class ProjectDetailsFragment : Fragment() {
 
-    companion object{
-        const val PROJECT_ID="projectId"
+    companion object {
+        const val PROJECT_ID = "projectId"
     }
 
     private lateinit var viewModel: ProjectDetailsViewModel
@@ -43,9 +43,10 @@ class ProjectDetailsFragment : Fragment() {
     ): View {
         _binding = ProjectDetailsFragmentBinding.inflate(inflater, container, false)
         val linearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-        val linearLayoutManagerSubtask = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        val linearLayoutManagerSubtask =
+            LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         val commentAdapter = CommentAdapter()
-        val subTaskAdapter=SubTaskAdapter()
+        val subTaskAdapter = SubTaskAdapter()
         val itemDecoration = DividerItemDecoration(
             requireContext(),
             DividerItemDecoration.VERTICAL
@@ -57,7 +58,7 @@ class ProjectDetailsFragment : Fragment() {
             rvComments.addItemDecoration(itemDecoration)
 
             rvSubtask.adapter = subTaskAdapter
-            rvSubtask.layoutManager =linearLayoutManagerSubtask
+            rvSubtask.layoutManager = linearLayoutManagerSubtask
         }
         commentAdapter.submitList(viewModel.commentList)
         subTaskAdapter.submitList(viewModel.subTasks)
@@ -68,7 +69,7 @@ class ProjectDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.ivBackButton.setOnClickListener { findNavController().navigateUp() }
-        val project= viewModel.getProjectById(arguments?.getInt(PROJECT_ID)!!)
+        val project = viewModel.getProjectById(arguments?.getInt(PROJECT_ID)!!)
         project?.let { setUpBanner(it) }
     }
 
