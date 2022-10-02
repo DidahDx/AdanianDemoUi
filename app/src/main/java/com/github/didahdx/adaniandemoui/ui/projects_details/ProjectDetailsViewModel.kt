@@ -2,7 +2,7 @@ package com.github.didahdx.adaniandemoui.ui.projects_details
 
 import androidx.lifecycle.ViewModel
 import com.github.didahdx.adaniandemoui.model.Project
-import com.github.didahdx.adaniandemoui.util.DummyData
+import com.github.didahdx.adaniandemoui.data.DummyData
 
 class ProjectDetailsViewModel : ViewModel() {
 

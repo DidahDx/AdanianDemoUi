@@ -2,7 +2,7 @@
 <badge xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/Widget.MaterialComponents.Badge"
     app:backgroundColor="#E4E4E4"
-    app:badgeTextColor="#000000"
+    app:badgeTextColor="@drawable/selection_chip_text_color"
     app:horizontalOffset="6dp"
     app:maxCharacterCount="2"
     app:verticalOffset="8dp" />
