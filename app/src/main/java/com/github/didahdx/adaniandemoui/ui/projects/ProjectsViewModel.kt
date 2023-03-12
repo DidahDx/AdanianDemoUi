@@ -1,7 +1,7 @@
 package com.github.didahdx.adaniandemoui.ui.projects
 
 import androidx.lifecycle.ViewModel
-import com.github.didahdx.adaniandemoui.util.DummyData
+import com.github.didahdx.adaniandemoui.data.DummyData
 
 class ProjectsViewModel : ViewModel() {
 

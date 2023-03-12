@@ -1,4 +1,4 @@
-package com.github.didahdx.adaniandemoui.util
+package com.github.didahdx.adaniandemoui.data
 
 import com.github.didahdx.adaniandemoui.R
 import com.github.didahdx.adaniandemoui.model.*
